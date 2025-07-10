@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+echo "Hello World"
+
 # Pull the Docker image from Docker Hub
 docker pull namratha3/simple-python-flask-app:latest 
 
