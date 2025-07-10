@@ -28,6 +28,12 @@ A comprehensive demonstration of implementing Continuous Integration and Continu
 
 This project demonstrates a complete CI/CD pipeline using AWS services to automatically build, test, and deploy a Python Flask application. The pipeline is triggered by code changes pushed to GitHub and handles the entire deployment process automatically.
 
+### 🎬 Pipeline in Action
+
+![AWS CodePipeline Success](https://user-images.githubusercontent.com/placeholder/aws-codepipeline-success.png)
+
+_Example of a successful CI pipeline execution showing the Source and Build stages completing successfully. The green checkmarks indicate that code was successfully pulled from GitHub and built using AWS CodeBuild._
+
 ### Key Features
 
 - **Automated Testing**: Runs unit tests on every commit
@@ -266,6 +272,32 @@ Set up CodeDeploy for automated application deployment:
    ```
 
 ## 🚀 Deployment Process
+
+### 📸 CI Pipeline Execution
+
+The following image shows a successful execution of the CI (Continuous Integration) portion of our pipeline:
+
+![CI Pipeline Success](assets/ci-pipeline-success.png)
+
+**What's happening in this CI pipeline:**
+
+1. **Source Stage (✅ Completed):**
+
+   - Pipeline automatically detects new commits from GitHub
+   - Downloads the latest source code (commit: `4970df7c`)
+   - Status: "All actions succeeded"
+   - Execution ID: `6fa553b2-7760-45b6-afc8-bdb8d8be8b4a`
+
+2. **Build Stage (✅ Completed):**
+   - AWS CodeBuild processes the source code
+   - Executes commands defined in `buildspec.yaml`
+   - Installs Python dependencies
+   - Builds Docker image
+   - Pushes image to registry
+   - Status: "All actions succeeded"
+   - Build completed at: Jul 10, 2025 6:56 PM (UTC+5:30)
+
+This demonstrates the **first part of CI/CD** - the **Continuous Integration** process where code changes are automatically integrated, built, and validated.
 
 ### Automated Deployment Flow
 
